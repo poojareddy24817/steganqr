@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #F8FAFC; /* slate-50 */
+    --color-foreground: #0F172A; /* slate-900 */
+    --color-border: #E2E8F0; /* slate-200 */
+    --color-input: #F1F5F9; /* slate-100 */
+    --color-ring: #3B82F6; /* blue-500 */
+    
+    /* Card & Surface */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #0F172A; /* slate-900 */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #0F172A; /* slate-900 */
+    
+    /* Muted Elements */
+    --color-muted: #F1F5F9; /* slate-100 */
+    --color-muted-foreground: #64748B; /* slate-500 */
+    
+    /* Brand Primary - Deep Navy */
+    --color-primary: #1E293B; /* slate-800 */
+    --color-primary-foreground: #F8FAFC; /* slate-50 */
+    
+    /* Brand Secondary - Supporting Structure */
+    --color-secondary: #334155; /* slate-700 */
+    --color-secondary-foreground: #F1F5F9; /* slate-100 */
+    
+    /* Accent - Electric Blue Innovation */
+    --color-accent: #3B82F6; /* blue-500 */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success - Positive Operations */
+    --color-success: #10B981; /* emerald-500 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning - Important Notices */
+    --color-warning: #F59E0B; /* amber-500 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error - Problem Identification */
+    --color-error: #EF4444; /* red-500 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    /* Destructive - Alias for Error */
+    --color-destructive: #EF4444; /* red-500 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Surface Elevation */
+    --color-surface: #F1F5F9; /* slate-100 */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #0F172A; /* slate-900 */
+    --color-text-secondary: #64748B; /* slate-500 */
+    
+    /* Brand Specific Colors */
+    --color-navy-deep: #1E293B; /* slate-800 */
+    --color-navy-light: #334155; /* slate-700 */
+    --color-blue-electric: #3B82F6; /* blue-500 */
+    --color-teal-sophisticated: #0891B2; /* cyan-600 */
+    --color-green-trust: #059669; /* emerald-600 */
+    --color-red-strategic: #DC2626; /* red-600 */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  }
+}
+
+@layer components {
+  /* Cryptographic Pattern Animation */
+  .crypto-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    animation: cryptoRotate 60s linear infinite;
+  }
+  
+  @keyframes cryptoRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Steganographic Reveal Animation */
+  .stego-reveal {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .stego-reveal:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  }
+  
+  /* Invisible to Visible Animation */
+  .invisible-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .invisible-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Security Badge Pulse */
+  .security-pulse {
+    animation: securityPulse 3s ease-in-out infinite;
+  }
+  
+  @keyframes securityPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  
+  /* Data Flow Animation */
+  .data-flow {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: dataFlow 2s linear infinite;
+  }
+  
+  @keyframes dataFlow {
+    to { stroke-dashoffset: 0; }
+  }
+  
+  /* Morphing Data Visualization */
+  .morph-data {
+    transition: all 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Quantum Micro-interactions */
+  .quantum-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .quantum-hover:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+  }
+}
+
+@layer utilities {
+  /* Brand Typography Utilities */
+  .text-brand-headline {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  
+  .text-brand-value {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .text-brand-body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+  
+  .text-brand-cta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .text-brand-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+  }
+  
+  /* Brand Shadow System */
+  .shadow-brand-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-brand-modal {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Brand Animation Utilities */
+  .animate-reveal {
+    animation: reveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* Scroll Reveal Utilities */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .scroll-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
